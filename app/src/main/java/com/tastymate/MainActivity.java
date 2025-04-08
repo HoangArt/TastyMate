@@ -41,6 +41,13 @@ public class MainActivity extends AppCompatActivity {
                 selectedFragment = new ProfileFragment();
             }
 
+            if (selectedFragment != null) {
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.frameLayout, selectedFragment)
+                        .commit();
+            }
+
             return true;
         });
 
